@@ -1,7 +1,5 @@
 import { createApp} from 'vue'
 import App from './App.vue'
-// import "bootstrap/dist/css/bootstrap.min.css";
-// import "bootstrap";
 import BootstrapIcon from '@dvuckovic/vue3-bootstrap-icons';
 
 import firebase from 'firebase'
@@ -23,7 +21,7 @@ firebase.initializeApp(firebaseConfig);
 // Get a reference to the database service
 
 
-const app = createApp(App).use(router).use(router)
+const app = createApp(App)
 app.use(router)
 app.component('BootstrapIcon', BootstrapIcon);
 
