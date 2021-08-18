@@ -1,26 +1,19 @@
 <template>
- <div>測試內容</div>
-  <router-view/>
+  <router-view />
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+html {
+  body {
+    background: linear-gradient(to right, #91eac5, #86a8e7, #7f7fd5);
+    background: -webkit-linear-gradient(to right, #91eac5, #86a8e7, #7f7fd5);
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+    #app {
+      font-family: Avenir, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-align: center;
+      color: #2c3e50;
     }
   }
 }

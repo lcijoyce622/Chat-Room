@@ -1,39 +1,10 @@
 <template>
   <div class="container col-8">
-    <h3 class="title">Chat Room</h3>
     <div class="messaging">
       <div class="inbox_msg">
-        <!-- <div class="inbox_people"> -->
-        <!-- <div class="headind_srch">
-            <div class="recent_heading">
-              <h4>Recent</h4>
-            </div>
-            <div class="srch_bar">
-              <div class="stylish-input-group">
-                <input type="text" class="search-bar" placeholder="Search" />
-                <span class="input-group-addon">
-                  <button type="button">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                  </button>
-                </span>
-              </div>
-            </div>
-          </div> -->
-        <!-- <div class="inbox_chat">
-            <div class="chat_list active_chat">
-              <div class="chat_people">
-                <div class="chat_img">
-                  <img
-                    src="https://ptetutorials.com/images/user-profile.png"
-                    alt="sunil"
-                  />
-                </div>
-                <div class="chat_ib"></div>
-              </div>
-            </div>
-          </div> -->
-        <!-- </div> -->
-        <!-- <div class="mesgs"> -->
+        <div class="title_bar">
+          <h3>Vue3 & Firebase Chat Room</h3>
+        </div>
         <div class="msg_history">
           <div v-for="message in messages" :key="message.key">
             <div
@@ -82,8 +53,6 @@
 
 <script>
 import firebase from "firebase";
-
-//!重新把樣式寫過
 export default {
   data() {
     return {
@@ -170,15 +139,21 @@ export default {
     border: 1px solid #c4c4c4;
     clear: both;
     overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
     p {
       border-radius: 3px;
       font-size: 14px;
       padding: 5px 10px 5px 12px;
-      max-width: 80%;
+      max-width: 70%;
       word-break: break-all;
       margin: 0;
     }
-
+    .title_bar {
+      padding: 15px 0;
+      color: #f1f1f1;
+      border-bottom: 1px solid #f1f1f1;
+    }
     .msg_history {
       height: 80vh;
       overflow-y: auto;
@@ -186,16 +161,16 @@ export default {
       .name {
         font-size: 12px;
         margin: 8px 0;
+        color: #f1f1f1;
       }
 
       .received_withd_msg {
         .incoming_msg_img {
           border-radius: 50%;
           width: 2rem;
-          // padding: 50px;
         }
         .time_date {
-          color: #747474;
+          color: #a7a7a7;
           display: block;
           font-size: 12px;
           margin: 8px 2.5rem;
@@ -204,35 +179,31 @@ export default {
       .received_msg {
         position: relative;
         text-align: left;
+        //  clear: both;
         p {
-          background: #ebebeb none repeat scroll 0 0;
+          display: inline-block;
 
+          background: #82ccdd none repeat scroll 0 0;
           margin-left: 2.5rem;
         }
-
-        float: left;
-        clear: both;
+       
         .incoming_msg_img {
-          // float: left;
           position: absolute;
           left: 0;
         }
       }
       .sent_msg {
         position: relative;
-        float: right;
-        clear: both;
+        // float: right;
+        // clear: both;
         text-align: right;
         p {
           display: inline-block;
-          background: #05728f none repeat scroll 0 0;
-          color: #fff;
+          background: #78e08f none repeat scroll 0 0;
           margin-right: 2.5rem;
         }
 
         .incoming_msg_img {
-          // float: right;
-          // clear: both;
           position: absolute;
           right: 0;
           margin-left: 10px;
@@ -242,18 +213,20 @@ export default {
     .type_msg {
       border-top: 1px solid #c4c4c4;
       position: relative;
+      padding: 10px 50px 10px 10px;
       .input_msg_write {
         .write_msg {
-          background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+          background: rgba(34, 34, 56, 0.589) none repeat scroll 0 0;
+          border-radius: 10px;
           border: medium none;
-          color: #4c4c4c;
+          color: #f1f1f1;
           font-size: 15px;
           min-height: 48px;
           width: 100%;
         }
 
         .msg_send_btn {
-          background: #05728f none repeat scroll 0 0;
+          background: #739da7 none repeat scroll 0 0;
           border: medium none;
           border-radius: 50%;
           color: #fff;
@@ -261,8 +234,8 @@ export default {
           font-size: 17px;
           height: 33px;
           position: absolute;
-          right: 0;
-          top: 11px;
+          right: 10px;
+          top: 15px;
           width: 33px;
         }
       }
