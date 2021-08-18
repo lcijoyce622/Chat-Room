@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container login">
     <h1>Please Login with your google account to continue.</h1>
     <button class="btn" @click="login">Login with google</button>
   </div>
@@ -30,7 +30,7 @@ export default {
 </script>
 
 <style lang="scss" scope>
-.container {
+.login {
   margin-top: 20%;
     color: rgb(188, 236, 255);
     h1{
