@@ -132,6 +132,7 @@ export default {
 <style lang="scss">
 .container {
   margin: auto;
+  margin-top: 20px;
   .title {
     padding: 2vh;
   }
